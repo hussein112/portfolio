@@ -1,0 +1,302 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;400;700&display=swap');
+
+:root{
+    --primary: #F6F4EB;
+    --secondary: #749BC2;
+    --tertiary: #4682A9;
+    --fourth: #91C8E4;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body{
+    background-color: var(--primary);
+}
+
+.container{
+    margin: auto;
+    padding: 5px;
+}
+
+@media (max-width: 576px){
+    .container{
+        width: 100%;
+    }
+}
+
+@media (min-width: 576px){
+    .container{
+        width: 540px;
+    }
+}
+
+@media (min-width: 768px){
+    .container{
+        width: 720px;
+    }
+}
+
+@media (min-width: 992px){
+    .container{
+        width: 960px;
+    }
+}
+
+@media (min-width: 1200px){
+    .container{
+        width: 1140px;
+    }
+}
+
+@media (min-width: 1400px){
+    .container{
+        width: 1320px;
+    }
+}
+
+.title{
+    width: 100%;
+    position: relative;
+    text-align: center;
+    padding: 10px 0;
+    color: var(--tertiary);
+}
+
+.title::before,
+.title::after{
+    content: "";
+    position: absolute;
+    width: 40%;
+    height: 2px;
+    background-color: var(--fourth);
+}
+
+.title::before{
+    top: 0;
+    left: 0;
+}
+
+.title::after{
+    bottom: 0;
+    right: 0;
+}
+
+/* Start Header */
+
+.header{
+    position: relative;
+    height: 800px;
+}
+
+@media (max-width: 576px){
+    .header{
+        min-height: 100vh;
+    }
+}
+
+.its-hussein{
+    display: flex;
+}
+
+.its,
+.full-stack{
+    color: var(--secondary);
+    font-size: 50px;
+}
+
+.hussein{
+    margin-left: 10px;
+    color: var(--tertiary);
+    font-size: 100px;
+}
+
+.words{
+    transform: scale(0);
+    animation: pop-up .5s linear forwards;
+}
+
+@keyframes pop-up{
+    100%{
+        transform: scale(1);
+    }
+}
+
+@keyframes full-stack{
+    100%{
+        transform: scale(1);
+    }
+}
+
+
+@media (max-width: 576px){
+    .hussein{
+        font-size: 50px;
+    }
+    .its,
+    .full-stack{
+        color: var(--secondary);
+        font-size: 25px;
+    }
+}
+
+.dev{
+    position: absolute;
+    right: 0;
+    top: 40%;
+    height: 40%;
+    background-image: url(vectors/dev.png);
+    width: 40%;
+    background-size: CONTAIN;
+    background-repeat: no-repeat;
+    transform: scale(0);
+    animation: pop-up .5s linear forwards;
+}
+
+.vertical{
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 30%;
+    background-image: url(vectors/vertical.svg);
+    width: 5%;
+    background-size: CONTAIN;
+    background-repeat: no-repeat;
+    transform: scale(0);
+    animation: pop-up .5s linear forwards;
+}
+
+.services{
+    margin-top: 10%;
+    display: flex;
+    flex-direction: column;
+    transform: scale(0);
+    animation: pop-up .5s .5s ease-in-out forwards;
+}
+
+@media (max-width: 576px){
+    .services{
+        margin-top: 50%;
+    }
+}
+
+.services .list-item{
+    width: 400px;
+    margin: 20px 0;
+}
+
+.services .service{
+    margin-top: 6px;
+    animation: service 1s .5s linear forwards;
+}
+
+@keyframes service{
+    100%{
+        left: 6%;
+    }
+}
+
+@media (max-width: 576px){
+    .list-item{
+        width: 250px !important;
+    }
+}
+
+
+.services .service{
+    color: var(--tertiary);
+}
+
+.services .nb{
+    background-image: url(vectors/list-item.svg);
+    padding: 4% 5%; 
+    background-size: contain;
+    background-repeat: no-repeat;
+    color: var(--primary);
+    font-size: 21px;
+}
+
+
+.ctas{
+    margin-top: 10%;
+    position: relative;
+    transform: scale(0);
+    animation: pop-up .5s 1s ease-in-out forwards;
+}
+
+@media (max-width: 576px){
+    .ctas{
+        margin-top: 40%;
+    }
+}
+
+.ctas a{
+    position: relative;
+    width: 100px;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    background-color: var(--fourth);
+    padding: 11px;
+    color: var(--primary);
+    border-radius: 5px;
+    transition: .3s;
+}
+
+.ctas a:hover{
+    background-color: var(--primary);
+    color: var(--fourth);
+}
+
+/* End Header */
+
+
+
+/* Start Connect Section */
+
+.connect{
+    height: 700px;
+}
+
+.socials{
+    margin-top: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.social{
+    width: 300px;
+    height: 270px;
+    margin: 2px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--fourth);
+}
+
+.social a{
+    padding: 50px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.l-i a{
+    background-image: url('vectors/li.svg');
+}
+
+.email a{
+    background-image: url('vectors/mail.svg');
+}
+
+.github a{
+    background-image: url('vectors/github.svg');
+}
+
+/* End Connect Section */
